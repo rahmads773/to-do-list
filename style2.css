@@ -77,7 +77,7 @@ body {
 }
 @media (max-width:767px) {
     .control .container{
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }
 .lang {
