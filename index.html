@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="shortcut icon" href="list.png" type="image/x-icon" />
+    <link rel="stylesheet" href="normalize.css" />
+    <script defer src="main2.js"></script>
+    <title>TO DO list</title>
+  </head>
+  <body>
+    <!-- start control -->
+    <div class="control">
+      <div class="container">
+        <i class="bi bi-moon-fill mode" id="moon"></i>
+        <i class="bi bi-brightness-high-fill mode" id="sun"></i>
+        <div class="langs">
+          <button class="lang" id="eng">Eng</button>
+          <button class="lang" id="arb" lang="arb">ع</button>
+        </div>
+      </div>
+    </div>
+    <!-- end control -->
+    <!-- start heading -->
+    <div class="heading">
+      <div class="container">
+        <h1 id="title">TO DO list</h1>
+      </div>
+    </div>
+    <!-- end heading -->
+    <!-- start tasks section -->
+    <section id="section" class="tasks-section">
+      <div class="container">
+        <div class="task">
+          <i class="bi bi-star-fill"></i>
+          <p class="po" id="task1">Task 1</p>
+          <div class="flex">
+            <i class="bi bi-trash"></i>
+            <i class="bi bi-emoji-angry"></i>
+          </div>
+        </div>
+        <div class="task">
+          <i class="bi bi-star-fill"></i>
+          <p class="po" id="task2">Task 2</p>
+
+          <div class="flex">
+            <i class="bi bi-trash"></i>
+            <i class="bi bi-emoji-angry"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- start tasks section -->
+    <!-- start form -->
+    <div class="form">
+      <h2 id="title2">What's up ?</h2>
+      <div class="container">
+        <form>
+          <input type=" text" placeholder="write it down mate!!" />
+          <button type="submit" class="submit">
+            <i class="bi bi-upload"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- end form -->
+  </body>
+</html>

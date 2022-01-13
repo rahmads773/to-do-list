@@ -1,0 +1,321 @@
+/* start global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --section-padding: 50px;
+  --main-transition:0.5s;
+}
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(38, 40, 43);
+  box-shadow: inset 0 0 2.5px 2px rgba(77, 75, 75, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #0c4558, #b8cde4);
+  border-radius: 1rem;
+}
+
+/* for Firefox */
+html {
+  scrollbar-color: #c4deff #082a35;
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background: linear-gradient(to bottom, #74ebd5, #acb6e5);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* small screens */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* meduim screens */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end global rules */
+
+/* start control */
+.control {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.control .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width:767px) {
+    .control .container{
+        justify-content: space-around;
+    }
+}
+.lang {
+  border: 2px solid;
+  padding: 10px 20px;
+  border-radius: 15px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 10px;
+  transition: var(--main-transition);
+}
+#eng:hover {
+  background-color: rgba(21, 49, 87, 0.788);
+  border: 0;
+  color: #fff;
+}
+#arb:hover {
+  border: 0;
+  background-color: rgb(148, 54, 70);
+  color: #fff;
+}
+.control .bi-moon-fill {
+  font-size: 25px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.control .bi-moon-fill:hover {
+  color: #fff;
+  font-size: 28px;
+}
+.control .bi-brightness-high-fill {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+  color: #fff;
+  transition: var(--main-transition);
+}
+
+.control .bi-brightness-high-fill:hover {
+  font-size: 28px;
+  color: #000;
+}
+/* end control */
+/* start heading */
+.heading {
+  margin: 100px 0 50px;
+}
+.heading h1 {
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: -1px;
+}
+/* end heading */
+/* start tasks section */
+.tasks-section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.tasks-section .task {
+  display: flex;
+  cursor: pointer;
+  font-size: 22px;
+  width: 70%;
+  text-align: center;
+  margin: 0 auto 25px;
+  padding: 5px 20px;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.486),
+    rgba(255, 255, 255, 0.753)
+  );
+  border-radius: 15px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px gray;
+  border-bottom: 5px solid rgba(65, 61, 61, 0.692);
+  transition:var(--main-transition);
+}
+@media (max-width:767px) {
+    .tasks-section .task{
+        width: 90%;
+    }
+}
+.tasks-section .task:hover {
+  transform: scale(1.04);
+}
+.tasks-section .task .bi-star-fill {
+  opacity: 0.6;
+  font-size: 24px;
+  transition: var(--main-transition);
+}
+.tasks-section .task .bi-star-fill:hover {
+  color: rgb(58, 126, 216);
+  opacity: 1;
+}
+.tasks-section .task .flex {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.tasks-section .task .flex .bi-trash {
+  margin-right: 20px;
+  font-size: 24px;
+  transition: var(--main-transition);
+}
+.tasks-section .task .flex .bi-trash:hover {
+  color: brown;
+}
+.tasks-section .task .flex .bi-emoji-angry {
+  font-size: 24px;
+  transition: var(--main-transition);
+}
+.dis {
+    display: none;
+  }
+.tasks-section .task .flex .bi-emoji-angry:hover {
+  color: rgb(75, 209, 153);
+}
+
+.bi-trash:hover,
+.bi-star-fill:hover,
+.bi-emoji-angry:hover {
+  font-size: 26px;
+}
+.bi-emoji-heart-eyes {
+  font-size: 24px;
+  color: rgb(216, 63, 63);
+  transition: var(--main-transition);
+}
+.bi-emoji-heart-eyes:hover {
+  color: rgb(100, 19, 19);
+}
+.finish {
+  text-decoration-line: line-through;
+  color: indianred;
+}
+.star {
+  opacity: 1;
+  color: rgb(36, 199, 228);
+}
+/* start tasks section */
+/* start form */
+.form {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.form h2 {
+  text-align: center;
+  font-size: 40px;
+}
+.form form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: fit-content;
+  margin: 0 auto;
+}
+@media (max-width:767px) {
+    .form form{
+        flex-direction: column;
+        justify-content: center;
+    gap: 20px;
+    }
+}
+.form form input{
+  all: unset;
+  font-size: 17px;
+  text-align: center;
+  margin: 0 25px;
+  border-radius: 15px;
+  border: none;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.486),
+    rgba(255, 255, 255, 0.514)
+  );
+  box-shadow: 0 0 10px black;
+  padding: 0.5rem 3rem;
+}
+.form form .submit {
+    all: unset;
+    font-size: 26px;
+    cursor: pointer;
+  }
+.form form .bi-upload {
+ transition: var(--main-transition);
+      
+}
+.form form .bi-upload:hover {
+    font-size: 28px;
+    color: rgb(27, 177, 127);
+  }
+/* end form */
+
+
+
+
+/* start Dark mode */
+@media (prefers-color-scheme: dark) {
+  .dark {
+    background: linear-gradient(to bottom, #2c3e50, #4ca1af);
+  }
+  .dark .bi-moon-fill {
+    color: #fff;
+  }
+  .dark .bi-moon-fill:hover {
+    color: black;
+  }
+  .dark h1 {
+    color: #fff;
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+  }
+  .dark .task {
+    background: linear-gradient(45deg, #ccdbfd, #d7e3fc);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.705);
+    border-bottom: 5px solid rgba(0, 0, 0, 0.692);
+  }
+  .dark h2 {
+    color: #fff;
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+  }
+  .dark input {
+    background: linear-gradient(45deg, #ccdbfd, #d7e3fc);
+    box-shadow: 0 0 10px rgba(184, 180, 180, 0.747);
+  }
+  .dark .bi-upload:hover {
+    color: #00d4c9;
+  }
+  .dark .lang {
+    border: 2px solid #fff;
+    color: #fff;
+  }
+  .dark #eng:hover {
+    background-color: turquoise;
+  }
+  .dark #arb:hover {
+    background-color: rgb(199, 106, 118);
+  }
+}
+/* end dark mode */
