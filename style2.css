@@ -7,9 +7,11 @@
 :root {
   --section-padding: 50px;
   --main-transition:0.5s;
+  --main-color:#011627;
+  --secondary-color:#0c4558;
 }
 ::-webkit-scrollbar {
-  width: 1rem;
+  width: 0.9rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -36,8 +38,8 @@ a {
   text-decoration: none;
 }
 body {
-  background: linear-gradient(to bottom, #74ebd5, #acb6e5);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background: linear-gradient(to bottom, #4CA1AF, #C4E0E5);
+  font-family: 'Cairo', sans-serif;
 }
 .container {
   padding-right: 15px;
@@ -75,34 +77,31 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width:767px) {
-    .control .container{
-        justify-content: space-between;
-    }
-}
 .lang {
-  border: 2px solid;
+  border: 2px solid var(--main-color);
   padding: 10px 20px;
   border-radius: 15px;
   background-color: transparent;
   cursor: pointer;
   font-size: 18px;
   margin-right: 10px;
+  color: var(--main-color);
   transition: var(--main-transition);
 }
 #eng:hover {
   background-color: rgba(21, 49, 87, 0.788);
-  border: 0;
+  border: 2px solid rgba(21, 49, 87, 0.788);
   color: #fff;
 }
 #arb:hover {
-  border: 0;
+  border: 2px solid rgb(148, 54, 70);
   background-color: rgb(148, 54, 70);
   color: #fff;
 }
 .control .bi-moon-fill {
   font-size: 25px;
   cursor: pointer;
+  color: var(--main-color);
   transition: var(--main-transition);
 }
 .control .bi-moon-fill:hover {
@@ -130,6 +129,12 @@ body {
   text-align: center;
   font-size: 50px;
   letter-spacing: -1px;
+  color: #011627;
+}
+@media (max-width:767px) {
+  .heading h1{
+    font-size: 40px;
+  }
 }
 /* end heading */
 /* start tasks section */
@@ -144,7 +149,7 @@ body {
   width: 70%;
   text-align: center;
   margin: 0 auto 25px;
-  padding: 5px 20px;
+  padding: 20px 15px;
   background: linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.486),
@@ -159,11 +164,22 @@ body {
 }
 @media (max-width:767px) {
     .tasks-section .task{
-        width: 90%;
+      width: 100%;
+      
     }
 }
 .tasks-section .task:hover {
   transform: scale(1.04);
+}
+.tasks-section .task p{
+  margin: 0;
+  font-size: 22px;
+}
+@media (max-width:767px) {
+  .tasks-section .task p{
+      font-size: 20px;
+    
+  }
 }
 .tasks-section .task .bi-star-fill {
   opacity: 0.6;
@@ -224,6 +240,7 @@ body {
 .form {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
+  margin-bottom: 100px;
 }
 .form h2 {
   text-align: center;
@@ -240,13 +257,12 @@ body {
     .form form{
         flex-direction: column;
         justify-content: center;
-    gap: 20px;
+        gap: 45px;
     }
 }
 .form form input{
   all: unset;
   font-size: 17px;
-  text-align: center;
   margin: 0 25px;
   border-radius: 15px;
   border: none;
@@ -255,8 +271,15 @@ body {
     rgba(255, 255, 255, 0.486),
     rgba(255, 255, 255, 0.514)
   );
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px rgb(0 0 0 / 52%);
   padding: 0.5rem 3rem;
+  caret-color:var(--secondary-color) ;
+}
+.form form input::placeholder{
+  transition: var(--main-transition);
+}
+.form form input:focus::placeholder{
+  opacity: 0;
 }
 .form form .submit {
     all: unset;
@@ -272,7 +295,22 @@ body {
     color: rgb(27, 177, 127);
   }
 /* end form */
+/* start footer */
+footer{
+  text-align: center;
+  padding: 20px 30px;
+  border-top: 1px solid var(--secondary-color);
+  font-size: 17px;
 
+}
+footer a{
+  display: inline-block;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+/* end footer */
 
 
 
