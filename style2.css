@@ -276,6 +276,7 @@ body {
   caret-color:var(--secondary-color) ;
 }
 .form form input::placeholder{
+  text-align: center;
   transition: var(--main-transition);
 }
 .form form input:focus::placeholder{
@@ -305,7 +306,7 @@ footer{
 }
 footer a{
   display: inline-block;
-  color: #000;
+  color: #ad5173;
   font-size: 20px;
   font-weight: bold;
   margin-left: 10px;
