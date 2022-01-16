@@ -356,5 +356,8 @@ footer a{
   .dark #arb:hover {
     background-color: rgb(199, 106, 118);
   }
+   .dark footer a{
+    color: #fff;
+  }
 }
 /* end dark mode */
